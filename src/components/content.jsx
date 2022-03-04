@@ -1,6 +1,8 @@
+import React from 'react';
+
 function Content(){
     return(
-        <div>
+        <div id='content'>
             <p>burası içerik bölümü</p>
         </div>
     );

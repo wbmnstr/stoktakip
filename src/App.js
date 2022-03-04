@@ -1,9 +1,11 @@
-import Menu from "./components/menu"
-import Content from "./components/content"
+import React from "react";
+import Menu from "./components/menu";
+import Content from "./components/content";
+import "./App.css";
 
 function App() {
   return (
-    <div className="d-flex flex-direction-row">
+    <div id="main">
       <Menu/>
       <Content />
     </div>
