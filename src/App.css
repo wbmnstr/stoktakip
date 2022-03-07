@@ -5,23 +5,165 @@
 }
 
 html{
-  height: 100%;
-}
-body{
-  height: 100%;
-  background: wheat;
+  margin:0;
 }
 
-#main{
-  height: 100%;
+body{ 
+  background: wheat;
+  font-size:1.2em;
+  color:#2a2a2a;
+  font-family: Calibri, sans-serif;
+}
+
+#root{
+  height: 100vh;
   display: flex;
   flex-direction: row;
 }
 #menu{
-  background: violet;
+  background: linear-gradient(rgb(22, 27, 36),rgb(91, 103, 121));
+  height: 100%;
   flex: 250px;
 }
+#menu #logo{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#menu #menuheader{
+  background-image: linear-gradient(to right, yellow,yellow,red,deeppink,purple, purple);
+  background-clip: text;
+  color:transparent;
+  font-weight: bold;
+  font-size:2em;
+  text-align: center;
+}
+#menu #logo img{
+  width: 50px;
+}
+#menu .links{
+  margin: 10px 5px ;
+  padding: 10px;
+  border-radius:10px;
+}
+#menu .links a{
+  display: block;
+  text-decoration: none;
+  box-shadow:rgb(19, 25, 32) 0 0 5px 0;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius:5px;
+  color: tomato;
+  text-shadow: tomato 0 0 5px ;
+  transition: all 0.2s;
+}
+#menu .links a:hover{
+  background:rgb(69, 79, 92);
+}
+#menu .links a.active{
+  background:rgb(20, 27, 36);
+}
 #content{
-  background: skyblue;
-  flex:100%
+  padding: 10px;
+  background: rgb(192, 211, 218);
+  flex:100%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+#geneldokum{
+  display:flex;
+  flex-direction: row;
+}
+#geneldokum .dokumcard{
+  border-radius: 10px;;
+  box-shadow: rgb(121, 145, 153) 0 0 10px 0;
+  margin: 10px 5px 0 0;
+  width:80px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.dokumcard:hover{
+  transform: scale(1.1) ;
+}
+.dokumcard *{text-align: center; }
+.dokumicon{
+  color:purple; 
+  font-size: 2em; 
+  padding-bottom: 10px;
+  background:yellow; 
+  border-bottom:purple solid 2px;
+}
+.dokumheader{color:black;background:whitesmoke;}
+.dokumamount{
+  font-weight: bolder; 
+  font-size: 1.5em;
+  color:yellow; 
+  text-shadow:black 0 0 3px;
+}
+
+#yenikayitform{
+  background:whitesmoke;
+  padding: 60px 10px 10px 10px;
+  margin-top: 30px;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow:rgba(121, 145, 153, 0.6) 0 0 10px 0;
+  position: relative;
+
+}
+#yenikayitform .yenikayiticon{
+  position: absolute;
+  padding: 10px;
+  width:50px;
+  height:50px;
+  top: -25px;
+  left:225px;
+  background:linear-gradient(red, purple);
+  color:yellow;
+  border-radius: 50%;
+  text-align: center;
+  display:flex;
+}
+#yenikayitform span{
+  padding-left:10px;
+  font-size:0.8em;
+}
+#yenikayitform input{
+  padding-left:10px;
+  height:40px;
+  width:100%;
+  font-size:1em;
+  margin: 0 0 5px 0;
+  border: thin #e8e8e8 solid;
+  border-radius: 20px;
+}
+#yenikayitform input::placeholder{
+  color: tomato;
+  opacity: 0.2;
+}
+#yenikayitform input:focus{
+  border: thin #e8e8e8 solid;
+  background:rgb(243, 243, 228);
+  outline:none;
+}
+#yenikayitform button{
+  background:linear-gradient(to bottom, red, purple);
+  border:none;
+  border-bottom:violet 4px  solid;
+  box-shadow: rgba(0,0,0,0.5) 0 5px 10px 0;
+  color:yellow;
+  font-size: 1.5em;
+  display:block;
+  margin:20px auto;
+  height:50px;
+  width: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#yenikayitform button:active{
+  margin-top: 20px;
+  border-bottom: none;
 }
